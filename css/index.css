@@ -1,0 +1,622 @@
+@import "reset.css";
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+  .border-1px::before {
+    transform: scaleY(0.5);
+  }
+}
+@media only screen and (-webkit-device-pixel-ratio: 3) {
+  .border-1px::before {
+    transform: scaleY(0.333333);
+  }
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+#app #content {
+  width: 100%;
+}
+#app #content header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background-color: #02a774;
+  text-align: center;
+  z-index: 20;
+}
+#app #content header .header-title {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 22px;
+}
+#app #content section {
+  display: none;
+  margin-top: 45px;
+}
+#app #content section button {
+  padding: 12px 16px;
+  color: #fff;
+  background-color: #02a774;
+  border-radius: 6px;
+  border: none;
+}
+#app #content section.on {
+  display: block;
+}
+#app #content section .swiper-container {
+  height: 170px;
+  width: 100%;
+  background-color: #fff;
+}
+#app #content section .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+#app #content section .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  *zoom: 1;
+}
+#app #content section .swiper-wrapper .swiper-slide::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content section .swiper-wrapper .swiper-slide li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  width: 25%;
+}
+#app #content section .swiper-wrapper .swiper-slide li img {
+  width: 50%;
+  height: 50%;
+  margin: 8px 0;
+}
+#app #content section .swiper-wrapper .swiper-slide li span {
+  font-size: 12px;
+}
+#app #content section .swiper-pagination .swiper-pagination-bullet-active {
+  background: #02a774;
+}
+#app #content section:first-child {
+  position: relative;
+  margin-top: 45px;
+}
+#app #content section:first-child header .header-login {
+  position: absolute;
+  right: 5px;
+  color: #fff !important;
+}
+#app #content section:first-child header .iconfont {
+  position: absolute;
+  left: 5px;
+  color: #fff;
+  font-size: 26px;
+}
+#app #content section:first-child .waimai-main {
+  background-color: #fff;
+  margin-top: 12px;
+  color: #999;
+}
+#app #content section:first-child .waimai-main .waimai-list {
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+#app #content section:first-child .waimai-main .waimai-list a {
+  display: block;
+  box-sizing: border-box;
+  padding: 15px 8px;
+  width: 100%;
+  position: relative;
+}
+#app #content section:first-child .waimai-main .waimai-list a::before {
+  content: '';
+  position: absolute;
+  z-index: 200;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  transform: scaleY(0.5);
+}
+#app #content section:first-child .waimai-main .waimai-list a li {
+  position: relative;
+  *zoom: 1;
+}
+#app #content section:first-child .waimai-main .waimai-list a li::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content section:first-child .waimai-main .waimai-list a li img {
+  float: left;
+  width: 25%;
+  height: 75px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo {
+  float: left;
+  font-size: 12px;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .sellerInfo-title {
+  color: #000;
+  font-size: 16px;
+  width: 150px;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .sellerInfo-title::before {
+  content: '品牌';
+  display: inline-block;
+  font-size: 11px;
+  line-height: 11px;
+  color: #333;
+  background-color: #ffd930;
+  padding: 2px 2px;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .stars {
+  margin: 12px auto;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .stars .star {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .stars .star.on {
+  background-image: url("../images/stars/star24_on@2x.png");
+}
+@media only screen and (-webkit-device-pixel-ratio: 3) {
+  #app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .stars .star.on {
+    background-image: url("../images/stars/star24_on@3x.png");
+  }
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .stars .star.half {
+  background-image: url("../images/stars/star24_half@2x.png");
+}
+@media only screen and (-webkit-device-pixel-ratio: 3) {
+  #app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .stars .star.half {
+    background-image: url("../images/stars/star24_half@3x.png");
+  }
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .stars .star.off {
+  background-image: url("../images/stars/star24_off@2x.png");
+}
+@media only screen and (-webkit-device-pixel-ratio: 3) {
+  #app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .stars .star.off {
+    background-image: url("../images/stars/star24_off@3x.png");
+  }
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .stars .grade {
+  color: #ff9a0d;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-sellerInfo .price {
+  margin-top: 10px;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-postInfo {
+  height: 75px;
+  width: 23%;
+  float: right;
+  position: relative;
+  *zoom: 1;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-postInfo::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-postInfo .baozhunpiao {
+  float: right;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-postInfo .baozhunpiao li {
+  float: left;
+  margin-left: 3px;
+  border: 1px solid #999;
+  font-size: 10px;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-postInfo .oneP {
+  font-size: 10px;
+  background-color: #02a774;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  padding: 1px;
+}
+#app #content section:first-child .waimai-main .waimai-list a li .list-postInfo .twoP {
+  font-size: 10px;
+  color: #02a774;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border: 1px solid #02a774;
+}
+#app #content section:nth-child(2) .search {
+  background-color: #fff;
+  height: 50px;
+  line-height: 50px;
+}
+#app #content section:nth-child(2) .search .search-text {
+  height: 30px;
+  width: 75%;
+  background-color: #dcdcdc;
+  margin-left: 6px;
+  border-radius: 2px;
+}
+#app #content section:nth-child(2) .search button {
+  width: 20%;
+  height: 30px;
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: bold;
+}
+#app #content section:nth-child(3) {
+  width: 100%;
+}
+#app #content section:nth-child(3) .order-wrap {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  color: #789;
+}
+#app #content section:nth-child(3) .order-wrap button {
+  margin-top: 10px;
+}
+#app #content section:nth-child(4) {
+  width: 100%;
+  margin-top: 50px;
+}
+#app #content section:nth-child(4) .login-wrap {
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  display: block;
+  padding: 20px 10px;
+  background-color: #02a774;
+}
+#app #content section:nth-child(4) .login-wrap .login {
+  color: #fff;
+  *zoom: 1;
+}
+#app #content section:nth-child(4) .login-wrap .login::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content section:nth-child(4) .login-wrap .login .login-left {
+  float: left;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: top;
+}
+#app #content section:nth-child(4) .login-wrap .login .login-left .icon-person {
+  font-size: 62px;
+  background-color: #e4e4e4;
+}
+#app #content section:nth-child(4) .login-wrap .login .userInfo {
+  float: left;
+  margin-left: 20px;
+}
+#app #content section:nth-child(4) .login-wrap .login .userInfo p {
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+#app #content section:nth-child(4) .login-wrap .login .userInfo span {
+  font-weight: normal;
+  vertical-align: baseline;
+}
+#app #content section:nth-child(4) .login-wrap .login .userInfo span .icon-mobile {
+  display: inline-block;
+  font-size: 32px;
+  position: relative;
+  top: 5px;
+}
+#app #content section:nth-child(4) .login-wrap .login .arrow {
+  float: right;
+}
+#app #content section:nth-child(4) .info_data_list {
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  *zoom: 1;
+}
+#app #content section:nth-child(4) .info_data_list::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content section:nth-child(4) .info_data_list .info_data_link {
+  width: 33%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #f1f1f1;
+}
+#app #content section:nth-child(4) .info_data_list .info_data_link .info_data_top {
+  padding: 15px 5px 10px;
+}
+#app #content section:nth-child(4) .info_data_list .info_data_link .info_data_bottom {
+  padding-bottom: 5px;
+}
+#app #content section:nth-child(4) .info_data_list .info_data_link:nth-child(1) .info_data_top span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffa500;
+}
+#app #content section:nth-child(4) .info_data_list .info_data_link:nth-child(2) .info_data_top span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff4500;
+}
+#app #content section:nth-child(4) .info_data_list .info_data_link:nth-child(3) .info_data_top span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #008000;
+}
+#app #content section:nth-child(4) .profile_my_order {
+  background-color: #fff;
+  width: 100%;
+}
+#app #content section:nth-child(4) .profile_my_order .my_order {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  height: 50px;
+  position: relative;
+}
+#app #content section:nth-child(4) .profile_my_order .my_order::before {
+  content: '';
+  position: absolute;
+  z-index: 200;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  transform: scaleY(0.5);
+}
+#app #content section:nth-child(4) .profile_my_order .my_order span:nth-child(1) .iconfont {
+  font-size: 32px;
+}
+#app #content section:nth-child(4) .profile_my_order .my_order span:nth-child(1) .iconfont.icon-order-s {
+  color: #008000;
+}
+#app #content section:nth-child(4) .profile_my_order .my_order span:nth-child(1) .iconfont.icon-jifen {
+  color: #f00;
+}
+#app #content section:nth-child(4) .profile_my_order .my_order span:nth-child(1) .iconfont.icon-vip {
+  color: #ffa500;
+}
+#app #content section:nth-child(4) .profile_my_order .my_order .my_order_div {
+  color: #000;
+  width: 82%;
+  display: flex;
+  justify-content: space-between;
+}
+#app #content section:nth-child(4) .profile_my_order .my_order .my_order_div .icon-jiantou1 {
+  font-size: 12px;
+  color: #808080;
+}
+#app footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 20;
+  background-color: #fff;
+}
+#app footer .guide-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+#app footer .guide-item .iconfont {
+  font-size: 20px;
+}
+#app footer .guide-item::before {
+  content: '';
+  position: absolute;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+#app footer .guide-item span:first-child {
+  margin: 8px 0;
+}
+#app footer .guide-item span:last-child {
+  font-size: 10px;
+}
+#app footer .guide-item.active {
+  color: #5cb85c;
+}
+#app >.off {
+  display: none;
+}
+#app >.on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+}
+#app >.on .loginContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+#app >.on .loginContainer .loginInner {
+  padding-top: 60px;
+  width: 80%;
+  margin: 0 auto;
+}
+#app >.on .loginContainer .loginInner .login_header .login_logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #02a774;
+  text-align: center;
+}
+#app >.on .loginContainer .loginInner .login_header .login_header_title {
+  padding-top: 40px;
+  text-align: center;
+}
+#app >.on .loginContainer .loginInner .login_header .login_header_title >a {
+  color: #333;
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+#app >.on .loginContainer .loginInner .login_header .login_header_title >a:first-child {
+  margin-right: 40px;
+}
+#app >.on .loginContainer .loginInner .login_header .login_header_title >a.active {
+  color: #02a774;
+  font-weight: 700;
+  border-bottom: 2px solid #02a774;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div {
+  display: none;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div.active {
+  display: block;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div input {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: 0;
+  font: 400 14px Arial;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div input:focus {
+  border: 1px solid #02a774;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div .login_message {
+  position: relative;
+  margin-top: 16px;
+  height: 48px;
+  font-size: 14px;
+  background: #fff;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div .login_message .get_verification {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border: 0;
+  color: #ccc;
+  font-size: 14px;
+  background: transparent;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div .login_verification {
+  position: relative;
+  margin-top: 16px;
+  height: 48px;
+  font-size: 14px;
+  background: #fff;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div .login_verification .switch_button {
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+  padding: 0 6px;
+  width: 30px;
+  height: 16px;
+  line-height: 16px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+#app >.on .loginContainer .loginInner .login_content >form >div .login_verification .switch_button.off {
+  background: #fff;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div .login_verification .switch_button.off .switch_text {
+  float: right;
+  color: #ddd;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div .login_verification .switch_button.on {
+  background: #02a774;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div .login_verification .switch_button >.switch_circle {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div .login_hint {
+  margin-top: 12px;
+  color: #999;
+  font-size: 14px;
+  line-height: 20px;
+}
+#app >.on .loginContainer .loginInner .login_content >form >div .login_hint >a {
+  color: #02a774;
+}
+#app >.on .loginContainer .loginInner .login_content >form .login_submit {
+  display: block;
+  width: 100%;
+  height: 42px;
+  margin-top: 30px;
+  border-radius: 4px;
+  background: #4cd96f;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 42px;
+  border: 0;
+}
+#app >.on .loginContainer .loginInner .login_content .about_us {
+  display: block;
+  font-size: 12px;
+  margin-top: 20px;
+  text-align: center;
+  color: #999;
+}
+#app >.on .loginContainer .loginInner .go_back {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+}
+#app >.on .loginContainer .loginInner .go_back >.iconfont {
+  font-size: 20px;
+  color: #999;
+}
